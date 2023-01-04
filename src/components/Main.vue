@@ -49,10 +49,9 @@ export default {
                 size : this.size
             }).then((response) => {
                 this.img = response.data.data
-                console.log('this.img :>> ', this.img);
                 this.loading = false
-            }).catch((err)=> {
-                this.error = err.message
+            }).catch((response)=> {
+                this.error =response.response.data.error
                 this.loading = false
             })
         }
