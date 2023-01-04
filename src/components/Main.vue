@@ -44,7 +44,7 @@ export default {
             e.preventDefault()
             this.loading = true
             this.error = ''
-            axios.post('http://localhost:5000/openai/generateImage', {
+            axios.post('https://excited-hare-belt.cyclic.app/openai/generateImage', {
                 prompt : this.text,
                 size : this.size
             }).then((response) => {
